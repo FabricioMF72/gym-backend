@@ -4,7 +4,7 @@ const app = express() /* creating express application */
 
 app.use(cors())
 app.use(express.json())
-const port = 3000
+
 
 let rutines = [
         {
@@ -87,6 +87,9 @@ app.use((request, response,next) =>{
     next();
 })
 
+
+const PORT = process.env.PORT || 3001
+
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Example app listening at http://localhost:${PORT}`)
 })
